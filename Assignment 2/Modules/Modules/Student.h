@@ -3,6 +3,8 @@
 #include <vector>
 #include "Module.h"
 
+class Module; // forward declaration
+
 class Student {
 public:
 	Student (std::string naam);

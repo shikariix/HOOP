@@ -4,6 +4,8 @@
 #include "Student.h"
 #include "Docent.h"
 
+class Student; // forward declaration
+
 class Module {
 public:
 	Module ();
