@@ -1,0 +1,5 @@
+﻿  Source.cpp
+d:\documenten\visual studio 2015\projects\operators\operators\source.cpp(24): error C2677: binary '+=': no global operator found which takes type 'Transactie' (or there is no acceptable conversion)
+  Bankrekening.cpp
+d:\documenten\visual studio 2015\projects\operators\operators\bankrekening.cpp(35): error C2111: '+': pointer addition requires integral operand
+  Generating Code...
