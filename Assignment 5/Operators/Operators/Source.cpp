@@ -20,8 +20,8 @@ int main () {
 */
 
 	Bankrekening* bankrekening = new Bankrekening(0);
-	Transactie t1 = Transactie(Transactie::BIJSCHRIJVING, 100, "14-01-2018");
-	bankrekening += t1;
+	const Transactie t1 = Transactie(Transactie::BIJSCHRIJVING, 100, "14-01-2018");
+	bankrekening = bankrekening + t1;
 	std::cout << bankrekening << std::endl;
 	return 0;
 }

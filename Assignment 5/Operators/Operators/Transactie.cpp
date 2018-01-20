@@ -37,5 +37,9 @@ int Transactie::getType () const {
 	return 0;
 }
 
+void Transactie::setType (int type) {
+	this->type = type;
+}
+
 Transactie::~Transactie () {
 }
