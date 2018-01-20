@@ -8,7 +8,7 @@ public:
 	Transactie (int type, double amount, std::string date);
 	double getAmount () const;
 	int getType () const;
-	void setType (int type);
+	void setType (const int type);
 
 	static const int BIJSCHRIJVING = 0;
 	static const int AFSCHRIJVING = 1;

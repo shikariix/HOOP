@@ -1,10 +1,10 @@
 ﻿  Transactie.cpp
   Source.cpp
-d:\documenten\visual studio 2015\projects\operators\operators\source.cpp(24): error C2677: binary '+': no global operator found which takes type 'const Transactie' (or there is no acceptable conversion)
+d:\documenten\visual studio 2015\projects\operators\operators\source.cpp(24): error C2110: '+': cannot add two pointers
   Bankrekening.cpp
-d:\documenten\visual studio 2015\projects\operators\operators\bankrekening.cpp(14): error C2662: 'void Transactie::setType(int)': cannot convert 'this' pointer from 'const Transactie' to 'Transactie &'
+d:\documenten\visual studio 2015\projects\operators\operators\bankrekening.cpp(14): error C2662: 'void Transactie::setType(const int)': cannot convert 'this' pointer from 'const Transactie' to 'Transactie &'
   d:\documenten\visual studio 2015\projects\operators\operators\bankrekening.cpp(14): note: Conversion loses qualifiers
-d:\documenten\visual studio 2015\projects\operators\operators\bankrekening.cpp(20): error C2662: 'void Transactie::setType(int)': cannot convert 'this' pointer from 'const Transactie' to 'Transactie &'
+d:\documenten\visual studio 2015\projects\operators\operators\bankrekening.cpp(20): error C2662: 'void Transactie::setType(const int)': cannot convert 'this' pointer from 'const Transactie' to 'Transactie &'
   d:\documenten\visual studio 2015\projects\operators\operators\bankrekening.cpp(20): note: Conversion loses qualifiers
 d:\documenten\visual studio 2015\projects\operators\operators\bankrekening.cpp(26): error C2111: '+': pointer addition requires integral operand
   Generating Code...
