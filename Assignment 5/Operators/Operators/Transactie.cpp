@@ -37,9 +37,8 @@ int Transactie::getType () const {
 	return 0;
 }
 
-void Transactie::setType (int type) {
-	this->type = type;
+std::string Transactie::getDate() const {
+	return date;
 }
 
-Transactie::~Transactie () {
-}
+Transactie::~Transactie () = default;

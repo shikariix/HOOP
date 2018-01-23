@@ -1,7 +1,6 @@
 #include "Bankrekening.h"
 
 
-
 Bankrekening::Bankrekening () {
 	saldo = 0;
 }
@@ -10,26 +9,26 @@ Bankrekening::Bankrekening (double saldo) {
 	this->saldo = saldo;
 }
 
-Bankrekening Bankrekening::operator+(const Transactie& t1) {
-	t1.setType (Transactie::BIJSCHRIJVING);
+Bankrekening Bankrekening::operator+(Transactie& t1) {
+	saldo = saldo + t1.getAmount ();
 	transacties.push_back (t1);
-	return Bankrekening (saldo + t1.getAmount ());
+	return *this;
 }
 
-Bankrekening Bankrekening::operator-(const Transactie& t1) {
-	t1.setType (Transactie::AFSCHRIJVING);
+Bankrekening Bankrekening::operator-(Transactie& t1) {
+	saldo = saldo - t1.getAmount ();
 	transacties.push_back (t1);
-	return Bankrekening (saldo - t1.getAmount ());
+	return *this;
 }
 
-std::string Bankrekening::operator<<(const Bankrekening& b) const {
-	return "Huidig Saldo: " + b.getSaldo() + "\nTransactie Geschiedenis: \n stuff";
-}
+std::ostream& operator<<(std::ostream& os, const Bankrekening& b) {
+	os << "Huidig Saldo: " << b.saldo << "\nTransactie Geschiedenis: " << b.transacties.size() << " transacties" << std::endl;
+	for (int i = 0; i < b.transacties.size (); ++i) {
+		os << "Type: " << b.transacties[i].getType() << ", " << b.transacties[i].getAmount () << ", " << b.transacties[i].getDate () << std::endl;
+	}
 
-double Bankrekening::getSaldo () const {
-	return saldo;
+	return os;
 }
-
 
 Bankrekening::~Bankrekening () {
 }

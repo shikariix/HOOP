@@ -19,9 +19,14 @@ int main () {
 		geeft saldo, en historie van transacties..
 */
 
-	Bankrekening* bankrekening = new Bankrekening(0);
-	const Transactie* t1 = new const Transactie(Transactie::BIJSCHRIJVING, 100, "14-01-2018");
+	Bankrekening bankrekening = Bankrekening(0);
+	Transactie t1 = Transactie(Transactie::BIJSCHRIJVING, 100, "14-01-2018");
+	bankrekening = bankrekening + t1;
+	bankrekening = bankrekening + t1;
 	bankrekening = bankrekening + t1;
 	std::cout << bankrekening << std::endl;
+
+	char c;
+	std::cin >> c;
 	return 0;
 }
